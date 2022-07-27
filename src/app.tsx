@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {EmployeeComponent} from './test/Employee';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -11,6 +12,7 @@ function App() {
                     count is {count}
                 </button>
             </div>
+            <EmployeeComponent />
         </div>
     )
 }
