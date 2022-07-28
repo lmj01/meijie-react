@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "css-index": "sass --style=compressed ./style/index.scss ./style/css/index.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "meijie",
@@ -18,6 +19,7 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
+    "sass": "^1.54.0",
     "typescript": "^4.7.4",
     "vite": "^3.0.2"
   }

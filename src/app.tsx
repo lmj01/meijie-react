@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {EmployeeComponent} from './test/Employee';
+import '../style/css/index.css';
 
 function App() {
     const [count, setCount] = useState(0);
