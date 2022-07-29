@@ -121,7 +121,9 @@ export class EmployeeComponent extends Component<any, any> {
     }
     onCreate(newEmployee:any) {
         console.log('--', newEmployee)
-        // mjPost()
+        mjPost('/api/empoyess', newEmployee).then((res) => {
+            console.log(res);
+        });
         // follow(client, root, ['employees']).then(employeeCollection => {
         //     return client({
         //         method: 'POST',
