@@ -1,6 +1,7 @@
 import {Component} from 'react';
 import {findDOMNode} from 'react-dom';
 import {mjPost, mjGet} from '../toolkit/mjFetch';
+import {mjClient,mjSubscrible} from '../toolkit/stompjs';
 
 /**
  * https://datatracker.ietf.org/doc/html/rfc6570
@@ -118,6 +119,11 @@ export class EmployeeComponent extends Component<any, any> {
                 attributes: res.alps.descriptor[0].descriptor.map((e:any)=>e.name),
             });
         })
+        mjClient.activate();
+        mjSubscrible('/payroll');
+    }
+    componentWillUnmount() {
+        mjClient.deactivate();
     }
     onCreate(newEmployee:any) {
         console.log('--', newEmployee)

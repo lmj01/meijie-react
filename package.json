@@ -12,6 +12,7 @@
   "author": "meijie",
   "license": "ISC",
   "dependencies": {
+    "@stomp/stompjs": "^6.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
