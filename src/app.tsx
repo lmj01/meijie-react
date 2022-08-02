@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {EmployeeComponent} from './test/Employee';
+import {TestIndex} from './test/Index';
 import '../style/css/index.css';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
                     count is {count}
                 </button>
             </div>
-            <EmployeeComponent />
+            <TestIndex />
         </div>
     )
 }

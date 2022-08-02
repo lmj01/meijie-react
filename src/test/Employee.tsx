@@ -120,7 +120,7 @@ export class EmployeeComponent extends Component<any, any> {
             });
         })
         mjClient.activate();
-        mjSubscrible('/payroll');
+        // mjSubscrible('/payroll');
     }
     componentWillUnmount() {
         mjClient.deactivate();
