@@ -8,7 +8,7 @@ export class TestIndex extends Component {
     render() {
         return (
             <div>
-                <h1>{fingerOfCanvas('https://www.baidu.com')}</h1>
+                <h5>{fingerOfCanvas('https://www.baidu.com')}</h5>
                 <Toggle />
                 <Clock />
                 <EmployeeComponent />

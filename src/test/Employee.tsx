@@ -1,7 +1,6 @@
 import {Component} from 'react';
 import {findDOMNode} from 'react-dom';
 import {mjPost, mjGet} from '../toolkit/mjFetch';
-import {mjClient,mjSubscrible} from '../toolkit/stompjs';
 
 /**
  * https://datatracker.ietf.org/doc/html/rfc6570
@@ -106,7 +105,7 @@ export class EmployeeComponent extends Component<any, any> {
     }
     componentDidMount() {
         mjGet('/api/employees').then((res) => {
-            console.log(res);
+            // console.log(res);
             this.setState({
                 employees: res._embedded.employees,
             });
@@ -114,21 +113,21 @@ export class EmployeeComponent extends Component<any, any> {
         // http://alps.io/
         // Application-Level Profile Semantics (ALPS)
         mjGet('/api/profile/employees', {contentType:'application/schema+json'}).then((res) => {
-            console.log(res)
+            // console.log(res)
             this.setState({
                 attributes: res.alps.descriptor[0].descriptor.map((e:any)=>e.name),
             });
         })
-        mjClient.activate();
+        // mjClient.activate();
         // mjSubscrible('/payroll');
     }
     componentWillUnmount() {
-        mjClient.deactivate();
+        // mjClient.deactivate();
     }
     onCreate(newEmployee:any) {
-        console.log('--', newEmployee)
+        // console.log('--', newEmployee)
         mjPost('/api/empoyess', newEmployee).then((res) => {
-            console.log(res);
+            // console.log(res);
         });
         // follow(client, root, ['employees']).then(employeeCollection => {
         //     return client({

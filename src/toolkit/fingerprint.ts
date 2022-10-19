@@ -33,6 +33,5 @@ export function fingerOfCanvas(domain:string) {
     const b64 = canvas.toDataURL().replace("data:image/png;base64,","");
     const bin = atob(b64);
     const crc = bin2hex(bin.slice(-16,-12));
-    console.log(crc);
     return crc;
 }
