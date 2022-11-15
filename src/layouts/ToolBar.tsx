@@ -9,7 +9,11 @@ class ToolBar extends Component<IToolBar,any> {
         super(props);
     }
     render() {
-        return (<ThemeButton />);
+        return (
+        <div className="d-flex bg-light">
+            <ThemeButton />
+        </div>
+        );
     }
 }
 

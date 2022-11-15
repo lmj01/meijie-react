@@ -1,7 +1,8 @@
-import { Component, createContext } from 'react';
+import { Component } from 'react';
 import {TestIndex} from './test/Index';
 import { ThemeList, ThemeContext } from './helper/Theme';
 import ToolBar from './layouts/ToolBar';
+import PageUseEffect from './pages/Effect';
 import '../style/css/index.css';
 
 class App extends Component<any,any> {
@@ -41,6 +42,7 @@ class App extends Component<any,any> {
                             </button>
                         </div>
                         <TestIndex />
+                        <PageUseEffect></PageUseEffect>
                     </div>
                 </ThemeContext.Provider>
             </div>
